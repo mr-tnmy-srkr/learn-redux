@@ -11,7 +11,7 @@ Raw Redux
         <title>Simple Counter Application</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- import redux from cdn -->
-        <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.1/redux.min.js"></script>
     </head>
     <body>
         <div class="w-screen h-screen p-10 bg-gray-100 text-slate-700">
@@ -107,6 +107,84 @@ decrementEl.addEventListener("click", () => {
     store.dispatch({
         type: "decrement",
     });
+});
+
+</code>
+
+<hr/>
+
+<code>
+
+script.js 2.0
+
+// select dom elements
+const counterEl = document.getElementById("counter");
+const incrementEl = document.getElementById("increment");
+const decrementEl = document.getElementById("decrement");
+
+//action identifiers
+const INCREMENT = "increment";
+const DECREMENT = "decrement";
+
+//action creator
+const increment = (value) => {
+  return {
+    type: INCREMENT, //mandatory
+    payload: value,
+  };
+};
+const decrement = (value) => {
+  return {
+    type: DECREMENT, //mandatory
+    payload: value,
+  };
+};
+
+// initial state
+const initialState = {
+  value: 0,
+};
+
+// create reducer function
+function counterReducer(state = initialState, action) {
+  if (action.type === INCREMENT) {
+    return {
+      ...state,
+      // value: state.value + 1,
+      value: state.value + action.payload,
+    };
+  } else if (action.type === DECREMENT) {
+    return {
+      ...state,
+      // value: state.value - 1,
+      value: state.value - action.payload,
+    };
+  } else {
+    return state;
+  }
+}
+
+// create store
+const store = Redux.createStore(counterReducer);
+
+//as it is vanilla js so we have to update ui manually
+const render = () => {
+  const state = store.getState();
+  counterEl.innerText = state.value.toString();
+};
+
+// update UI initially
+render();
+
+store.subscribe(render);
+
+// button click listeners
+incrementEl.addEventListener("click", () => {
+  store.dispatch(increment(5));
+});
+
+decrementEl.addEventListener("click", () => {
+  store.dispatch(decrement(4));
 });
 
 </code>
