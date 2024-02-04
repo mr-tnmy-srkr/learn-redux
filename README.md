@@ -1,4 +1,7 @@
-Raw Redux 
+<h1 >Raw Redux </h1>
+
+how redux works
+https://images.app.goo.gl/czUTQ1JaFVx4n69QA
 
 
 //index.html
