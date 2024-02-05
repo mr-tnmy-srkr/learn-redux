@@ -3,9 +3,8 @@
 how redux works
 https://images.app.goo.gl/czUTQ1JaFVx4n69QA
 
-[Imgur](https://i.imgur.com/5CBVDHQ.gifv)
 
-![https://i.imgur.com/5CBVDHQ.gif]()
+![](https://i.imgur.com/5CBVDHQ.gif)
 
 //index.html
 
