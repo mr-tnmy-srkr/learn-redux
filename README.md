@@ -5,25 +5,20 @@ https://images.app.goo.gl/czUTQ1JaFVx4n69QA
 
 
 //index.html
-<!DOCTYPE html>
-<html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simple Counter Application</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- import redux from cdn -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.1/redux.min.js"></script>
     </head>
     <body>
         <div class="w-screen h-screen p-10 bg-gray-100 text-slate-700">
-            <!-- header -->
             <h1 class="max-w-md mx-auto text-center text-2xl font-bold">
                 Simple Counter Application
             </h1>
-
-            <!-- counters -->
             <div class="mx-auto max-w-md mt-10 space-y-5">
                 <div
                     class="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow"
@@ -48,14 +43,13 @@ https://images.app.goo.gl/czUTQ1JaFVx4n69QA
                 </div>
             </div>
         </div>
-
         <script src="./script.js"></script>
     </body>
-</html>
+
 
 <hr/>
 
-//Script.js
+//script.js
 
 <code> 
 
@@ -118,7 +112,7 @@ decrementEl.addEventListener("click", () => {
 
 <code>
 
-script.js 2.0
+//script.js 2.0
 
 // select dom elements
 const counterEl = document.getElementById("counter");
